@@ -1,14 +1,19 @@
 import './App.css';
 import React from 'react';
+
+import MyComponent from './03/MyComponent';
 import ColorComponent from './03/ColorComponent';
 import ChildComponent2 from './03/ChildComponent2'
 import DefaultPropsComponennt from './03/DefaultPropsComponent'
 import ChildProperty from './03/ChildProperty'
 
+import Counter from './03/Counter'
+
 function App() {
   
   return (
     <div>
+      <MyComponent name="서지원 존잘"/>
       <h1>ColorComponent</h1>
       <div><b>지루할 때 :</b>
         <ColorComponent name="seojiwon" color="red" bored />
@@ -37,6 +42,11 @@ function App() {
           <div><span>자식 노드</span></div>
         </ChildProperty>
       </div>
+
+      <div>
+        <Counter/>
+      </div>
+
     </div>
   );
 }

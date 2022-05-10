@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// prop-types : 컴포넌트에 전달되는 props의 타입 검사
 
 function DefaultPropsComponennt (props) {
 
