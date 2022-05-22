@@ -8,11 +8,20 @@ import DefaultPropsComponennt from './03/DefaultPropsComponent'
 import ChildProperty from './03/ChildProperty'
 
 import Counter from './03/Counter'
+import ListExample from './03/ListExample';
+import TodoList from './03/TodoList';
 
 function App() {
   
   return (
-    <div>
+    <React.Fragment>
+      {/*
+        <> </> 
+        이거랑 똑같음
+
+        => '의미 없는 최상위 노드를 추가하는 것'의 개선
+      */}
+{/* <div> */}
       <MyComponent name="서지원 존잘"/>
       <h1>ColorComponent</h1>
       <div><b>지루할 때 :</b>
@@ -24,30 +33,24 @@ function App() {
         <ColorComponent name="seowjion"/>
       </div>
 
-      <div>
-        <ChildComponent2
-          objValue={{age : 20, name : "지원"}}
-          //  age 문자열로 값 주면 경고문 나옴
-          requiredStringValue ="문자"
-          // 필수 프로퍼티 값 안주면 경고문 나옴
-        />
-      </div>
+      <ChildComponent2
+        objValue={{age : 20, name : "지원"}}
+        //  age 문자열로 값 주면 경고문 나옴
+        requiredStringValue ="문자"
+        // 필수 프로퍼티 값 안주면 경고문 나옴
+      />
 
-      <div>
-        <DefaultPropsComponennt/>
-      </div>
+      <DefaultPropsComponennt/>
+      <ChildProperty>
+          <div>
+            <span>자식 노드</span>
+          </div>
+      </ChildProperty>
 
-      <div>
-        <ChildProperty>
-          <div><span>자식 노드</span></div>
-        </ChildProperty>
-      </div>
-
-      <div>
-        <Counter/>
-      </div>
-
-    </div>
+      <Counter/>
+      <ListExample/>
+      <TodoList/>
+    </React.Fragment>
   );
 }
 
