@@ -1,5 +1,6 @@
 import './App.css';
 import React from 'react';
+import { useState } from 'react';
 
 import MyComponent from './03/MyComponent';
 import ColorComponent from './03/ColorComponent';
@@ -10,10 +11,22 @@ import ChildProperty from './03/ChildProperty'
 import Counter from './03/Counter'
 import ListExample from './03/ListExample';
 import TodoList from './03/TodoList';
+import CounterApp from './03/CounterApp';
 
 function App() {
-  
-  return (
+  const [count, setCount] = useState(1);
+
+  function increaseCount() {
+    setCount(count => count + 1);
+  }
+  function decreaseCount() {
+    setCount(count => count - 1);
+  }
+  function resetCount() {
+    setCount(1)
+  }
+
+  return (  
     <React.Fragment>
       {/*
         <> </> 
@@ -50,6 +63,7 @@ function App() {
       <Counter/>
       <ListExample/>
       <TodoList/>
+      <CounterApp count = {count} onAdd = {increaseCount} onMinus = {decreaseCount} onReset = {resetCount}/>
     </React.Fragment>
   );
 }
