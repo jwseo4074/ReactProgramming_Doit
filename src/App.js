@@ -15,7 +15,10 @@ import CounterApp from './03/CounterApp';
 
 import TopHeader from './Material_UI/materialUI_01';
 
+import Text from './04/Text';
+import Button from './04/Button';
 
+import BtnAndText from './05/BtnAndText';
 
 function App() {
   const [count, setCount] = useState(1);
@@ -72,6 +75,15 @@ function App() {
       <ListExample/>
       <TodoList/>
       <CounterApp count = {count} onAdd = {increaseCount} onMinus = {decreaseCount} onReset = {resetCount}/>
+      <h1> 04 </h1>
+      <Text children = "seo"/> 
+      <Button children="Jiwon in Btn"/>
+
+      <h1> 05 </h1>
+      <BtnAndText
+        btnFunc = {<Button children = "Btn And Text - Button" onPress = {() => {alert("Button Click !! ")}}/>} 
+        textFunc = {<Text  children = "Btn And Text - Text"/>}/>
+
     </React.Fragment>
   );
 }
