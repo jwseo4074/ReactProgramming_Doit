@@ -8,12 +8,12 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 //  이건 돼
 
 import Header from './Pages/Header';
-import Main from './Pages/Main'
-
-
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Example3Page from './Pages/Example3Page';
+import Example4Page from './Pages/Example4Page';
+import Example5Page from './Pages/Example5Page';
+import MaterialUI01 from './Main/Material_UI/materialUI01';
 
 function App() {
 
@@ -45,6 +45,9 @@ function App() {
           <Route exact path="/" element={<Home/>}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/03page" element={<Example3Page/>}/>
+          <Route path="/04page" element={<Example4Page/>}/>
+          <Route path="/05page" element={<Example5Page/>}/>
+          <Route path="/material" element={<MaterialUI01/>}/>
         </Routes>
       </Router> 
 

@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 
 import MyComponent from '../Main/PracticeExample/03/MyComponent';
-import ColorComponent from '../Main/PracticeExample/03/ColorComponent';
 import ChildComponent2 from '../Main/PracticeExample/03/ChildComponent2'
 import DefaultPropsComponennt from '../Main/PracticeExample/03/DefaultPropsComponent'
 import ChildProperty from '../Main/PracticeExample/03/ChildProperty'
